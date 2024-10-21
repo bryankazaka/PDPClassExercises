@@ -12,9 +12,12 @@ public class Main {
             int randomNumber = random.nextInt(100) + 1;
             bst.put(randomNumber);
         }
-        System.out.println("Postorder");
+
+        System.out.println("Inorder");
+        bst.inorder();
+        System.out.println("\nPostorder");
         bst.postorder();
-        System.out.println("Preorder");
+        System.out.println("\nPreorder");
         bst.preorder();
 
     }

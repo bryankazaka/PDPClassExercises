@@ -54,7 +54,7 @@ public class BST {
         if (root == null) return;
         postOrder(root.left);
         postOrder(root.right);
-        System.out.println(root.value);
+        System.out.print(root.value + " ");
     }
 
     // BRYAN KAZAKA
@@ -65,9 +65,22 @@ public class BST {
 
     private void preOrder(Node node) {
         if (node == null) return;
-        System.out.println(node.value);
+        System.out.print(node.value + " ");
         preOrder(node.left);
-        preOrder(node.left);
+        preOrder(node.right);
         }
+
+    // HARRY
+    public void inorder(){
+        inOrderTraverse(root);
+    }
+
+    private void inOrderTraverse(Node root) {
+        // Base case: if we meet null node, return
+        if (root == null) return;
+        inOrderTraverse(root.left);
+        System.out.print(root.value + " ");
+        inOrderTraverse(root.right);
+    }
 }
 
