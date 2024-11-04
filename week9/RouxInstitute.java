@@ -19,7 +19,7 @@ public class Card {
     // Builder method for setting cardNumber with validation
     public Builder setCardNumber(String cardNumber) {
         if (cardNumber == null) {
-            throw new IllegalArgumentException("Card number missed.");
+            throw new IllegalArgumentException("Card number missing.");
         }
         this.cardNumber = cardNumber;
         return this;
@@ -28,7 +28,7 @@ public class Card {
     // Builder method for setting expiryDate with validation
     public Builder setExpiryDate(String expiryDate) {
         if (expiryDate == null) {
-            throw new IllegalArgumentException("Expiry date missed.");
+            throw new IllegalArgumentException("Expiry date missing.");
         }
         this.expiryDate = expiryDate;
         return this;
