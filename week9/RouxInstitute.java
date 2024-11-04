@@ -4,6 +4,13 @@ public class Card {
     private String cardHolderName;
     private String cardType;
 
+    private Card(Builder builder) {
+        this.cardNumber = builder.cardNumber;
+        this.expiryDate = builder.expiryDate;
+        this.cardHolderName = builder.cardHolderName;
+        this.cardType = builder.cardType;
+    }
+    
     // Getters for each field
     public String getCardNumber() { return cardNumber; }
     public String getExpiryDate() { return expiryDate; }
