@@ -6,9 +6,12 @@ public class StringDecorator {
     {
         this.inputString = inputString;
     }
-    public LatexHeaderDecorator() {
+    public String LatexHeaderDecorator() {
         return "\\section{" + inputString + "} \\label{"
-                + inputString.toLowerCase().replace(" ", "-")
+                + inputString.toLowerCase()
+        replace(" ", "-")
+                .replace(",", "")
+                .replace("!", "")
                 +"}";
     }
 }
