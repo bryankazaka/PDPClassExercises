@@ -1,4 +1,6 @@
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 public class StringDecorator {
 
@@ -9,7 +11,7 @@ public class StringDecorator {
     }
 
 
-    public void jsonDecorator() {
+    public void jsonDecorator() throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter pw = new PrintWriter(inputString + ".json", "UTF-8");
         String[] splitByNewline = inputString.split(",");
         pw.println("[");
@@ -26,8 +28,25 @@ public class StringDecorator {
         pw.println("]");
     }
 
-    public void jsonDecorator() {
-        return "<p>" + inputString + "</p>";
+    public void htmlDecorator() {
+        System.out.println("<p>" + inputString + "</p>");
     }
-}
+
+    public void asciiDecorator()
+    {
+        String [] words = inputString.split(" ");
+        String res = "";
+        for(String word : words)
+        {
+            for(int i = 0; i < word.length(); i++)
+            {
+                res += String.valueOf((int)word.charAt(i)) + ",";
+            }
+            res+=" ";
+        }
+        res = res.strip();
+        res = res.substring(0, res.length()-1);
+        System.out.println(res);
+    }
+
 }
