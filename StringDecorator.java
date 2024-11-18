@@ -6,4 +6,9 @@ public class StringDecorator {
     {
         this.inputString = inputString;
     }
+    public LatexHeaderDecorator() {
+        return "\\section{" + inputString + "} \\label{"
+                + inputString.toLowerCase().replace(" ", "-")
+                +"}";
+    }
 }
