@@ -25,5 +25,9 @@ public class StringDecorator {
 
         pw.println("]");
     }
+
+    public void jsonDecorator() {
+        return "<p>" + inputString + "</p>";
+    }
 }
 }
