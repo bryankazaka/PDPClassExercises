@@ -49,7 +49,7 @@ public class StringDecorator {
         System.out.println(res);
     }
 
-    public void latexHeaderDecorator(String inputString) {
+    public void latexHeaderDecorator() {
         System.out.println("\\section{" + inputString + "} \\label{" +
                 inputString.toLowerCase()
                            .replace(" ", "-")
