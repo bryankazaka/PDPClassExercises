@@ -49,4 +49,12 @@ public class StringDecorator {
         System.out.println(res);
     }
 
+    public String LatexHeaderDecorator() {
+        return "\\section{" + inputString + "} \\label{"
+                + inputString.toLowerCase()
+        replace(" ", "-")
+                .replace(",", "")
+                .replace("!", "")
+                +"}";
+    }
 }
